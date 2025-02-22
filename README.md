@@ -80,7 +80,7 @@ streamlit run app.py
 ---
 
 ## 📧 Contact
-For any queries, feel free to reach out at [rishabh208020.com](mailto:rishabh208020@gmail.com).
+For any queries, feel free to reach out at [Portfolio@Colonel](https://rishabh-verma-portfolio.vercel.app/).
 
 Happy Coding! 🚀
 
