@@ -1,0 +1,10 @@
+streamlit 
+langchain 
+langchain_community
+python-dotenv 
+psycopg2-binary
+pgvector 
+pypdf
+google-generativeai
+google-genai
+sqlalchemy>=1.4.0
