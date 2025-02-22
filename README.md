@@ -59,22 +59,22 @@ streamlit run app.py
 
 ## 🏗️ Key Architectural Decisions & Trade-offs
 
-### ✅ **1. Vector Storage with Supabase**
+### **1. Vector Storage with Supabase**
 - **Why Supabase?** Free tier with PostgreSQL + pgvector support.
 - **Trade-off:** Cloud-hosted databases can face network/firewall issues on certain platforms (e.g., Hugging Face Spaces).
 
-### ✅ **2. Embedding Strategy using Gemini**
+### **2. Embedding Strategy using Gemini**
 - Separate embeddings for documents (**retrieval_document**) and user queries (**retrieval_query**) for optimized similarity search.
 
-### ✅ **3. Pooler Configuration for Supabase**
+### **3. Pooler Configuration for Supabase**
 - **Local Development:** Used **Session Pooler** (IPv4-friendly).
 - **Cloud Hosting (Hugging Face):** Switched to **Transaction Pooler** due to IPv6 network conflicts.
 
-### ✅ **4. Avoiding AI Hallucination**
+### **4. Avoiding AI Hallucination**
 - Prompt structure ensures that if the answer is not found in the document, the app explicitly responds with:
   > "I cannot find the answer in the provided documents."
 
-### ✅ **5. Hosting Constraints**
+### **5. Hosting Constraints**
 - **Hugging Face Spaces** faced **IPv6 connection issues** with Supabase. Resolved by switching poolers and ensuring IPv4 compatibility.
 
 ---
